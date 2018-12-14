@@ -1,5 +1,12 @@
 # my-project
+```
 
+Simple form transaction based on VUE CLI 3 with typescript (for learning purpose)
+without Bootstrap
+without JQuery
+node v9.11.1
+npm v6.4.1
+```
 ## Project setup
 ```
 npm install

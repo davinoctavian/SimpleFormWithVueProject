@@ -1,0 +1,374 @@
+html
+    background-color #ff8a0047
+
+#app
+    font-family 'Avenir', Helvetica, Arial, sans-serif
+    -webkit-font-smoothing antialiased
+    -moz-osx-font-smoothing grayscale
+    text-align center
+    min-width 740px
+
+#formBuying
+    padding 10px
+    min-height 400px
+
+.form
+    background-color #ffffff
+    text-align left
+    p
+        padding 10px
+
+
+.form__group
+    text-align left
+
+.buttonP
+    cursor pointer
+    
+.circle
+    border 1px solid #80808017
+    border-radius 50%
+    -webkit-box-sizing border-box
+    box-sizing border-box
+    width 20px
+    height 20px
+    background-color #80808017
+    display inline-block
+
+.circle__active
+    background-color #FF8A00
+    color white
+
+.check__active
+    border 1px solid #30b530
+
+.menu
+    position absolute
+    text-align center
+    color #FF8A00
+    background-color rgb(255, 222, 184);
+    width 40%
+    min-width 470px
+    border-bottom-left-radius 30px
+    border-bottom-right-radius 30px
+    margin-left 30%
+    margin-top 4px
+
+.displayGrid
+    display grid
+    padding 10px
+    grid-gap 1px
+
+.greenText
+    color #30b530
+
+.content
+    min-height 400px
+    grid-template-areas 'leftside rightside'
+
+.content__left
+    grid-area leftside
+    min-width 67vw
+    width 100%
+    h2
+        color #FF8A00
+
+.content__right
+    grid-area rightside
+    min-width 25vw
+    border-left 1px solid #ffdeb8
+    display flex
+    flex-direction column
+    padding-left 10px
+    div
+        flex-grow 1
+        p
+            padding 0
+    h2
+        color #FF8A00
+        
+    input
+        color white
+        background-color #FF8A00
+        height 60px
+
+.content__right__top
+    -webkit-box-flex 5!important
+    flex-grow 5!important
+
+hr
+    margin 0
+    box-shadow inset 0 12px 12px -12px rgba(0, 0, 0, 0.5)
+
+.contentMiddle
+    padding-left 20%
+    width 100%
+    h2
+        margin 0
+    hr
+        border none
+        width 180px
+        height 16px
+        margin-top -5px
+
+.content__left__top
+    width 100%
+    h2
+        margin 0
+    hr
+        border none
+        width 180px
+        height 16px
+        margin-top -5px
+        float left
+    div
+        width 67%
+        display inline-block
+    label
+        width 29%
+        display inline-block
+
+.content__left__middle
+    width 100%
+    display inline-block
+    margin-bottom 50px
+
+.content__left__middleLeft
+    width 60%
+    display inline-block
+
+.content__left__middleRight
+    width 35%
+    float right
+    margin-right 10px
+
+.content__right__middle
+    p
+        span 
+            float right
+    h2
+        color #FF8A00
+        span
+            float right
+
+.checklabel
+    display block
+    position relative
+    padding-left 24px
+    margin-bottom 14px
+    cursor pointer
+    font-size 12px
+    -webkit-user-select none
+    -moz-user-select none
+    -ms-user-select none
+    user-select none
+
+.checklabel 
+    input
+        position absolute
+        opacity 0
+        cursor pointer
+        height 0
+        width 0
+
+.checkmark
+    position absolute
+    top 0
+    left 0
+    height 15px
+    width 15px
+    background-color #eee
+
+.checklabel:hover input ~ .checkmark
+    background-color #ccc
+
+.checkmark:after
+    content ""
+    position absolute
+    display none
+    border 1px solid #30b530
+
+.checklabel input:checked ~ .checkmark:after
+    display block
+
+.checklabel .checkmark:after
+    left 3px
+    width 4px
+    height 10px
+    border solid #30b530
+    border-width 0 3px 3px 0
+    -webkit-transform rotate(45deg)
+    -ms-transform rotate(45deg)
+    transform rotate(45deg)
+    
+.text-danger
+    color orange!important
+
+.text-success
+    color #30b530!important
+
+.valid
+    border-color var(--color-primary)!important
+    background-image url("data:image/svg+xml,%3Csvg width='45px' height='34px' viewBox='0 0 45 34' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate%28-56.000000, -59.000000%29' fill='%232EEC96'%3E%3Cpolygon points='70.1468531 85.8671329 97.013986 59 100.58042 62.5664336 70.1468531 93 56 78.8531469 59.5664336 75.2867133'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A")!important
+    background-repeat no-repeat!important
+    background-position right 1rem center!important
+    background-size 0.75rem!important
+    border 1px solid #30b530!important
+
+.validbox
+    background-color #d9f1e2!important
+    border 2px solid #30b530!important
+    + span
+        color black!important
+        font-weight bold!important
+        + span 
+            color black!important
+
+.invalid
+    border-color var(--color-error)
+    background-image url("data:image/svg+xml,%3Csvg width='30px' height='30px' viewBox='0 0 30 30' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate%28-128.000000, -59.000000%29' fill='%23F44336'%3E%3Cpolygon points='157.848404 61.9920213 145.980053 73.8603723 157.848404 85.7287234 154.856383 88.7207447 142.988032 76.8523936 131.119681 88.7207447 128.12766 85.7287234 139.996011 73.8603723 128.12766 61.9920213 131.119681 59 142.988032 70.8683511 154.856383 59'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A")!important
+    background-repeat no-repeat!important
+    background-position right 1rem center!important
+    background-size 0.75rem!important
+    border 1px solid red!important
+
+.inp
+  position relative
+  margin auto
+  width 100%
+  max-width 100px
+  size 100px
+  .counter
+    color #c1afaf
+    position absolute
+    bottom 5px
+    right 5px
+  .label
+    position absolute
+    display block
+    top 16px
+    left 10px
+    font-size 16px
+    color #9098A9
+    font-weight 500
+    transform-origin 0 0
+    transition all .2s ease
+  .labelarea
+    position absolute
+    top 48px
+    right 340px
+    font-size 14px
+    color #223254
+    font-weight 500
+    transform-origin 0 0
+    transition all .2s ease
+  input
+    -webkit-appearance none
+    margin-top 10px
+    width 100%
+    max-width 400px
+    border 0
+    font-family inherit
+    padding 12px 0
+    height 32px
+    font-size 16px
+    font-weight 500
+    border 1px solid gray
+    background none
+    border-radius 0
+    color #223254
+    background-color #f5f5f5
+    transition all .15s ease
+    &:hover
+        //background: rgba(#223254,.03)
+    &:not(:placeholder-shown)
+      + span
+        color #5A667F
+        transform: translateY(-26px) scale(.75)
+    &:invalid
+        border-color var(--color-error)
+        background-image url("data:image/svg+xml,%3Csvg width='30px' height='30px' viewBox='0 0 30 30' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate%28-128.000000, -59.000000%29' fill='%23F44336'%3E%3Cpolygon points='157.848404 61.9920213 145.980053 73.8603723 157.848404 85.7287234 154.856383 88.7207447 142.988032 76.8523936 131.119681 88.7207447 128.12766 85.7287234 139.996011 73.8603723 128.12766 61.9920213 131.119681 59 142.988032 70.8683511 154.856383 59'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A")
+        background-repeat no-repeat
+        background-position right 1rem center
+        background-size 0.75rem
+    &:focus
+      //background: none
+      //outline: none
+      + span
+        color #0077FF
+        transform: translateY(-26px) scale(.75)
+
+  textarea
+    -webkit-appearance none
+    margin-top 10px
+    width 100%
+    max-width 400px
+    border 0
+    font-family inherit
+    padding 12px 0
+    font-size 16px
+    font-weight 500
+    border 1px solid gray
+    background none
+    border-radius 0
+    color #223254
+    background-color #f5f5f5
+    transition all .15s ease
+    &:hover
+        background: rgba(#223254,.03)
+
+.inp2
+  position relative
+  margin auto
+  width 100%
+  padding-right 12px
+  .label
+    position absolute
+    display block
+    top 2px
+    left 10px
+    font-size 16px
+    color gray
+    font-weight 500
+    transform-origin 0 0
+    transition all .2s ease
+    + span
+        transform: translateY(-26px) scale(.75)
+  input
+    -webkit-appearance none
+    margin-top 10px
+    width 100%
+    max-width 200px
+    border 0
+    font-family inherit
+    padding 12px 0
+    height 60px
+    font-size 16px
+    font-weight 500
+    border 1px solid gray
+    background none
+    border-radius 0
+    color #223254
+    background-color #f5f5f5
+    transition all .15s ease
+    &:focus
+        //background: rgba(#223254,.03)
+
+@media (max-width: 500px)
+    #formBuying
+        padding 10px
+
+@media (max-width: 1160px)
+    .menu
+        margin-left 25%
+
+@media (max-width: 985px)
+    .content
+        min-height 400px
+        grid-template-areas 'leftside' 'rightside'
+    .content__right
+        border-left 0
+
+@media (max-width: 850px)
+    .menu
+        margin-left 21%
